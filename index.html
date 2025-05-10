@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blake Ostler | WDD 231 - Course Home Page Assignment - Home</title>
+    <meta name="description"
+        content="Course home page with responsive behavior, a hamburger menu and filtering capability">
+    <meta name="author" content="Blake Ostler">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <button id="menu" title="Menu button"></button>
+        <nav>
+            <div class="navigation">
+                <div class="image-text-container">
+                    <img src="images/photo.PNG" alt="Cosmo image" width="90" height="96" class="logo-image">
+                    <span id="nav-header-text">Blake Ostler</span>
+                </div>
+                <ul class="nav-options">
+                    <li><a href="index.html" class="active" id="home-header-nav-link">Home</a></li>
+                    <li><a href="#" id="chamber-header-nav-link">Chamber</a></li>
+                    <li><a href="#" id="final-header-nav-link">Final</a></li>
+                    <li><a href="#" id="github-header-nav-link">GitHub Profile</a></li>
+                    <li><a href="https://www.linkedin.com" id="linkedin-header-nav-link">LinkedIn</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div id="sectionsContainer">
+            <section id="section1">
+                <h2>Course Work</h2>
+                <ul class="course-work-options">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section id="section2">
+                <h2>United States of America</h2>
+                <figure>
+                    <img src="images/eagle-large.jpeg" alt="Bald eagle image" width="90" height="96"
+                        loading="lazy" class="place-image">
+                    <figcaption>Bald eagle</figcaption>
+                </figure>
+            </section>
+            <section id="section3">
+                <h2>Web and Computer Programming Certificate</h2>
+                <ul class="filter-options">
+                    <li><a href="#" id="all">All</a></li>
+                    <li><a href="#" id="cse">CSE</a></li>
+                    <li><a href="#" id="wdd">WDD</a></li>
+                </ul>
+                <hr>
+                <p id="courseTotal">
+                </p>
+                <div class="container">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p id="footercopy">&copy;<span id="currentyear"></span> | Blake Ostler | U.S.A.</p>
+        <p id="lastModified">Last Update: <span id="currentdatetime"></span></p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,198 @@
+:root {
+    --header-footer-text-color: black;
+    --header-footer-background-color: navy;
+    --h2-text-color: white;
+    --h2-background-color: navy;
+    --theme-text-color: red;
+}
+
+body {
+    font-family: "Roboto", helvetica, sans-serif;
+}
+
+header,
+footer {
+    color: var(--header-footer-text-color);
+    background-color: var(--header-footer-background-color);
+}
+
+nav {
+    padding: 1rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-text-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#nav-header-text {
+    padding: 1.5rem 3.75rem;
+    font-size: 175%;
+    color: white;
+}
+
+.logo-image {
+    width: 75px;
+    height: 75.829px;
+}
+
+.nav-options {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: none;
+}
+
+.nav-options a {
+    display: block;    
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+.nav-options a:hover {
+    color: black;
+    font-weight: bold;
+    background-color: var(--theme-text-color);
+}
+
+.active::before {
+    content: "📍 ";
+}
+
+#menu {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    /* Location of nav menu button */
+    top: 0.9rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "=";
+    font-size: 125%;
+}
+
+#menu.open::before {
+    content: "X";
+    font-size: 125%;
+}
+
+.open ul {
+    display: block;
+}
+
+h1 {
+    padding-left: 1rem;
+    color: var(--theme-text-color);
+}
+
+section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--h2-background-color);
+    color: var(--h2-text-color);
+    border: 0.5px solid var(--h2-background-color);
+    border-radius: 5px;
+    margin: 0;
+    padding: 0.75rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: 80%;
+    color: black;
+    padding-top: 0.5rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0.5rem;
+}
+
+.filter-options a {
+    padding: 0.25rem 2.25rem;
+    max-width: 16px;
+    background-color: black;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.filter-options a:hover {
+    color: black;
+    background-color: lightgray;
+    border: 0.5px solid lightgray;
+}
+
+hr {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid gray;
+}
+
+#courseTotal {
+    margin: 0.5rem 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.card {
+    display: block;
+    text-align: center;
+    background-color: lightgray;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    margin: 0.25rem 1rem;
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 85%;
+    padding: 1rem;
+}
+
+footer p {
+    padding: 0.25rem;
+    margin: 0;
+    color: white;
+}
+
+#lastModified {
+    color: yellow;
+    font-size: 95%;
+}
