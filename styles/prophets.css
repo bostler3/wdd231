@@ -1,0 +1,51 @@
+body {
+    font-family: "Roboto", helvetica, sans-serif;
+    text-align: center;
+}
+
+header,
+footer {
+    color: white;
+    background-color: navy;
+}
+
+h1 {
+    padding: 1rem;
+}
+
+#cards {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+section {
+    text-align: center;
+    background-color: lightgray;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+section>h2 {
+    color: navy;
+}
+
+section>img {
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    font-size: 85%;
+    padding: 1rem;
+}
+
+footer p {
+    padding: 0.25rem;
+    margin: 0;
+    color: white;
+}
+
+#lastModified {
+    color: yellow;
+    font-size: 95%;
+}
