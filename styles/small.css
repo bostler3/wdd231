@@ -45,7 +45,20 @@ nav {
     list-style: none;
     padding: 0;
     text-align: center;
-    display: none;
+}
+
+#sub-nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+#sub-nav ul {
+    overflow: hidden;
+}
+
+#sub-nav.open {
+    grid-template-rows: 1fr;
 }
 
 .nav-options a {
@@ -75,17 +88,13 @@ nav {
 }
 
 #menu::before {
-    content: "=";
+    content: "≡";
     font-size: 125%;
 }
 
 #menu.open::before {
     content: "X";
     font-size: 125%;
-}
-
-.open ul {
-    display: block;
 }
 
 h1 {

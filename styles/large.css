@@ -42,6 +42,10 @@ Need to format "All", "CSE" and "WDD" filters
         padding-left: 2rem;
     }
 
+    #sub-nav {
+        grid-template-rows: 1fr;
+    }
+
     .active::before {
         content: none;
     }
