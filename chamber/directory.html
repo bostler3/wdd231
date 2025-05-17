@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blake Ostler | WDD 231 - Chamber of Commerce - Directory</title>
+    <meta name="description" content="Chamber of Commerce business directory page with responsive behavior, a hamburger menu and multiple display capability for main content">
+    <meta name="author" content="Blake Ostler">
+    <meta property="og:title" content="Directory Page - Blake Ostler WDD 231 - Chamber of Commerce Assignment">
+    <meta property="og:description" content="Chamber of Commerce business directory page with responsive behavior, a hamburger menu and multiple display capability for the main content that shows the business members of the Chamber and their respective information.">
+    <meta property="og:url" content="https://bostler3.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="images/facebook-meta-image.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="menu" title="Menu button"></button>
+        <nav>
+            <div class="navigation">
+                <div class="image-text-container">
+                    <a href="#"><img src="images/logo.webp" alt="Chamber of Commerce icon" width="115" height="115" class="logo-image"></a>
+                    <div class="nav-header-text">
+                        <h1>Diagon Alley</h1>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </div>
+                <div id="sub-nav">
+                    <ul class="nav-options">
+                        <li><a href="index.html" id="home-header-nav-link">Home</a></li>
+                        <li><a href="directory.html" class="active" id="directory-header-nav-link">Directory</a></li>
+                        <li><a href="join.html" id="join-header-nav-link">Join</a></li>
+                        <li><a href="discover.html" id="discover-header-nav-link">Discover</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="callouts">
+            <div class="callout-data">
+                <div class="callout-data-header">
+                    <h2>Member Directory</h2>
+                </div>
+                <div class="callout-data-subheader">Check out our members!</div>
+            </div>
+        </div>
+        <div class="display-options">
+            <button id="grid" title="Grid menu button">Grid</button>
+            <button id="list" title="List menu button">List</button>
+        </div>
+        <div class="container">
+        </div>
+    </main>
+    <footer>
+        <div id="footer-contact-section">
+            <p id="footer-name">Diagon Alley Chamber of Commerce</p>
+            <p class="footer-contact">7 High Street<br>
+            London, England HP1 3DA<br>
+            info@dacoc.org<br>
+            +44 020 5555 5555</p>
+        </div>
+        <hr>
+        <div id="footer-social-links-section">
+            <ul class="footer-nav-options">
+                <li><a href="https://www.youtube.com" id="youtube-footer-nav-link"><img src="images/social-youtube-icon.svg" alt="YouTube social icon" width="50" height="50"></a></li>
+                <li><a href="https://www.x.com" id="x-footer-nav-link"><img src="images/social-x-icon.svg" alt="X social icon" width="50" height="50" id="x-footer-nav-image"></a></li>
+                <li><a href="https://www.linkedin.com" id="linked-footer-nav-link"><img src="images/social-linkedin-icon.svg" alt="X social icon" width="50" height="50"></a></li>
+            </ul>
+        </div>
+        <hr>
+        <div id="footer-copyright-info-section">
+            <p>WDD231 Class Project<br>
+            Blake Ostler<br>
+            <p id="footercopy">&copy;<span id="currentyear"></span> Diagon Alley Chamber of Commerce<br>
+                Last modification: <span id="currentdatetime"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

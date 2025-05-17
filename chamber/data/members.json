@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Florean Fortescue's Ice Cream Parlour",
+            "address": "North Side, Diagon Alley",
+            "phone": "+44 020 1234 5678",
+            "website": "https://www.floreanfortescue.com",
+            "mainProductCat": "Food",
+            "imageUrl": "images/florean.jpg",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Borgin and Burkes",
+            "address": "13B, Knockturn Alley, Diagon Alley",
+            "phone": "+44 020 1011 1213",
+            "mainProduct": "Antiques",
+            "website": "https://www.borginandburks.com",
+            "imageUrl": "images/borgin.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Flourish & Blotts",
+            "address": "North Side, Diagon Alley",
+            "phone": "+44 020 9876 5432",
+            "mainProduct": "School Supplies",
+            "website": "https://www.flourishandblotts.com",
+            "imageUrl": "images/flourish.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Eeylops Owl Emporium",
+            "address": "521 North Side, Diagon Alley",
+            "phone": "+44 020 6789 1011",
+            "mainProduct": "School Supplies",
+            "website": "https://www.eeylopsowls.com",
+            "imageUrl": "images/eeylops.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Ollivanders",
+            "address": "South Side, Diagon Alley",
+            "phone": "+44 020 1110 9876",
+            "mainProduct": "School Supplies",
+            "website": "https://www.ollivanders.com",
+            "imageUrl": "images/ollivanders.webp",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Gringotts Wizarding Bank",
+            "address": "Charing Cross Road, Diagon Alley",
+            "phone": "+44 020 9999 9999",
+            "mainProduct": "Financial Services",
+            "website": "https://www.gringottsbank.com",
+            "imageUrl": "images/gringotts.webp",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Weasley's Wizarding Weezes",
+            "address": "93 Diagon Alley, Diagon Alley",
+            "phone": "+44 020 8888 8888",
+            "mainProduct": "School Supplies",
+            "website": "https://www.weasleysww.com",
+            "imageUrl": "images/weasley.webp",
+            "membershipLevel": 2
+        }
+    ]
+}

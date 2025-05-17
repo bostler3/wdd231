@@ -1,0 +1,258 @@
+/* Clean up large list view*/
+:root {
+    --main-background-color: #F4F5F4;
+    --theme-text-color: #CFAB38;
+    --gryffindor-text-color: #AE0001;
+    --gryffindor-accent-color: #EEBA35;
+    --slytherin-text-color: #0E5B51;
+    --slytherin-accent-color: #A2A2A2;
+    --ravenclaw-text-color: #0B5A89;
+    --ravenclaw-accent-color: #A2ABB2;
+    --hufflepuff-text-color: black;
+    --hufflepuff-accent-color: #ECAF1F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--main-background-color);
+}
+
+header,
+footer {
+    color: var(--theme-text-color);
+    background-color: black;
+    text-align: center;
+    font-family: "Inknut Antiqua", serif;
+}
+
+nav {
+    padding: 1rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.image-text-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+}
+
+.nav-header-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-header-text>h1 {
+    margin-bottom: 0.5rem;
+}
+
+.logo-image {
+    margin-right: 1.25rem;
+    width: 115px;
+    height: 115px;
+}
+
+.nav-options {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+#sub-nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+#sub-nav ul {
+    overflow: hidden;
+}
+
+#sub-nav.open {
+    grid-template-rows: 1fr;
+}
+
+.nav-options a {
+    display: block;
+    text-decoration: none;
+    color: var(--theme-text-color);
+    background-color: black;
+    padding: 0.5rem;
+}
+
+.nav-options a:hover {
+    color: black;
+    font-weight: bold;
+    background-color: var(--main-background-color);
+}
+
+.active::before {
+    content: "*  ";
+}
+
+#menu {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    align-items: center;
+}
+
+/* Location of nav menu button */
+#menu {
+    top: 0.9rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "≡";
+    font-size: 125%;
+}
+
+#menu.open::before {
+    content: "X";
+    font-size: 125%;
+}
+
+.callout-data {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--gryffindor-text-color);
+}
+
+.callout-data-header {
+    font-weight: bold;
+    font-size: 130%;
+    padding-bottom: 0.5rem;
+}
+
+.display-options {
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.display-options button {
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 0.5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container section {
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin: 0.25rem 1rem;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+.container section a {
+    color: var(--ravenclaw-text-color);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.list section {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 320px;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.list section img {
+    display: none;
+}
+
+.list section:nth-child(even) {
+    background-color: #bbb;
+}
+
+.card {
+    text-align: center;
+    padding: 0.75rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 75%;
+    padding: 0.75rem;
+}
+
+footer p {
+    padding: 0;
+    line-height: 1.5;
+}
+
+#footer-name {
+    font-weight: bold;
+}
+
+.footer-nav-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-nav-options img {
+    width: 75px;
+    height: auto;
+}
+
+#x-footer-nav-image {
+    width: 35px;
+}
+
+.footer-nav-options a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--theme-text-color);
+    padding: 0.25rem;
+}
+
+.footer-nav-options a:hover {
+    color: var(--theme-text-color);
+    font-weight: bold;
+    background-color: black;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+hr {
+    height: 0.5px;
+    width: 55%;
+    margin: 0.75rem auto;
+    border: none;
+    border-top: 1px solid var(--main-background-color);
+}
