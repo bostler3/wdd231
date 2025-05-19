@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blake Ostler | WDD 231 - JavaScript ES Modules Assignment</title>
+    <meta name="description"
+        content="Learning assignment with JavaScript ES Modules">
+    <meta name="author" content="Blake Ostler">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/modules.css">
+    <script type="module" src="scripts/modules.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Web Frontend Development I</h1>
+        <h2>WDD231</h2>
+        <div id="enrollment">
+            <p>Choose a section:</p>
+            <select id="sectionNumber">
+                <option value=""0" disabled selected>--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <button id="enrollStudent">Enroll a Student</button>
+            <button id="dropStudent">Drop a Student</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Enrolled</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody id="sections">
+                <tr>
+                    <td>1</td>
+                    <td>88</td>
+                    <td>Brother Bingham</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>81</td>
+                    <td>Sister Shultz</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>95</td>
+                    <td>Sister Smith</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
