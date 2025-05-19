@@ -13,7 +13,7 @@ const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement('section');
         let logo = document.createElement('img');
-        let name = document.createElement('h3');
+        let name = document.createElement('h2');
         let address = document.createElement('p');
         let phone = document.createElement('p');
         let website = document.createElement('a');

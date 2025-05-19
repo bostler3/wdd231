@@ -68,7 +68,6 @@
     }
 
     .callout-data {
-        padding-top: 2rem;
         width: 600px;
         border: none;
         background-color: rgba(255, 255, 255, 0);
@@ -77,10 +76,6 @@
     .callout-data-header,
     .callout-data-subheader {
         font-size: 150%;
-    }
-
-    .callout-data-header {
-        padding-bottom: 1rem;
     }
     
     .list {
