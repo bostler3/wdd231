@@ -7,7 +7,7 @@
             "website": "https://www.floreanfortescue.com",
             "mainProductCat": "Food",
             "imageUrl": "images/florean.jpg",
-            "membershipLevel": 1
+            "membershipLevel": "Bronze"
         },
         {
             "name": "Borgin and Burkes",
@@ -16,7 +16,7 @@
             "mainProduct": "Antiques",
             "website": "https://www.borginandburks.com",
             "imageUrl": "images/borgin.webp",
-            "membershipLevel": 1
+            "membershipLevel": "Bronze"
         },
         {
             "name": "Flourish & Blotts",
@@ -25,7 +25,7 @@
             "mainProduct": "School Supplies",
             "website": "https://www.flourishandblotts.com",
             "imageUrl": "images/flourish.webp",
-            "membershipLevel": 2
+            "membershipLevel": "Silver"
         },
         {
             "name": "Eeylops Owl Emporium",
@@ -34,7 +34,7 @@
             "mainProduct": "School Supplies",
             "website": "https://www.eeylopsowls.com",
             "imageUrl": "images/eeylops.webp",
-            "membershipLevel": 2
+            "membershipLevel": "Silver"
         },
         {
             "name": "Ollivanders",
@@ -43,7 +43,7 @@
             "mainProduct": "School Supplies",
             "website": "https://www.ollivanders.com",
             "imageUrl": "images/ollivanders.webp",
-            "membershipLevel": 3
+            "membershipLevel": "Gold"
         },
         {
             "name": "Gringotts Wizarding Bank",
@@ -52,7 +52,7 @@
             "mainProduct": "Financial Services",
             "website": "https://www.gringottsbank.com",
             "imageUrl": "images/gringotts.webp",
-            "membershipLevel": 3
+            "membershipLevel": "Gold"
         },
         {
             "name": "Weasley's Wizarding Weezes",
@@ -61,7 +61,7 @@
             "mainProduct": "School Supplies",
             "website": "https://www.weasleysww.com",
             "imageUrl": "images/weasley.webp",
-            "membershipLevel": 2
+            "membershipLevel": "Silver"
         }
     ]
 }

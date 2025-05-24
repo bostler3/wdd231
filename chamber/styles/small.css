@@ -22,7 +22,7 @@ main {
     background-color: var(--main-background-color);
 }
 
-header,
+nav,
 footer {
     color: var(--theme-text-color);
     background-color: black;
@@ -126,7 +126,37 @@ nav {
     font-size: 125%;
 }
 
-.callout-data {
+.hero-callouts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: var(--main-background-color);
+}
+
+.hero {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.callouts-index {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.callout-data-index {
+    padding-bottom: 2.5rem;
+    padding-right: 2rem;
+}
+
+.callout-data, h1 {
     width: 100%;
     height: auto;
     text-align: center;
@@ -136,7 +166,7 @@ nav {
     color: var(--gryffindor-text-color);
 }
 
-.callout-data-header > h1 {
+.callout-data-header>h1 {
     margin: 0.5rem 0 0.75rem 0;
 }
 
@@ -155,9 +185,85 @@ nav {
     text-align: center;
 }
 
-.display-options button {
+.display-options button, #index-button {
     padding: 1rem;
     font-weight: bold;
+    font-size: larger;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Got help with this button styling from a Bing search for "cool html button styles css" */
+#index-button {
+    display: inline-block;
+    cursor: pointer;
+    background: linear-gradient(45deg, var(--gryffindor-accent-color), var(--gryffindor-text-color));
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+#index-button:hover {
+    background: linear-gradient(45deg, var(--gryffindor-text-color), var(--gryffindor-accent-color));
+    transform: scale(1.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+#section1, #section2, #section3 {
+    margin: 1rem;
+    border: 0.5px solid var(--gryffindor-accent-color);
+    background-color: white;
+}
+
+#sectionsContainer h2 {
+    text-align: center;
+    background-color: var(--gryffindor-accent-color);
+    border: 0.5px solid var(--gryffindor-accent-color);
+    padding: 0.5rem;    
+}
+
+.event-list {
+    margin: 1rem 2rem;
+    color: var(--ravenclaw-text-color);
+}
+
+.event-list li {
+    line-height: 2em;
+}
+
+#current-weather-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+}
+
+#current-weather-image-text-column1 img {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+#current-weather-image-text-column2 {
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+
+#current-weather-image-text-column2 p {
+    line-height: 1.5em;
+    color: var(--slytherin-text-color);
+}
+
+#section3 p {
+    line-height: 2em;
+    font-size: larger;
+    padding-left: 1rem;
 }
 
 .container {
@@ -184,8 +290,35 @@ section h2 {
     font-size: 118%;
 }
 
-.container section a {
+.container section a, .sponsored-container section a {
     color: var(--ravenclaw-text-color);
+}
+
+.sponsored-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 0.5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+.sponsored-container section {
+    border: 0.5px solid var(--gryffindor-accent-color);
+    margin: 0.25rem 1rem;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+.sponsor-line {
+    height: 0.5px;
+    width: 100%;
+    margin: 0.75rem auto;
+    border: none;
+    border-top: 1px solid black;
 }
 
 .list {

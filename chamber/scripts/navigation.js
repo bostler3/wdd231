@@ -10,12 +10,12 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.toggle('open');
 });
 
-gridbutton.addEventListener('click', () => {
+gridbutton?.addEventListener('click', () => {
     display.classList.add("grid");
     display.classList.remove("list");
 });
 
-listbutton.addEventListener('click', () => {
+listbutton?.addEventListener('click', () => {
     display.classList.add("list");
     display.classList.remove("grid");
 });

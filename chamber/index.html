@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagon Alley Chamber of Commerce - Directory</title>
-    <meta name="description" content="Chamber of Commerce business directory page with responsive behavior, a hamburger menu and multiple display capability for main content">
+    <title>Diagon Alley Chamber of Commerce</title>
+    <meta name="description" content="Chamber of Commerce home page">
     <meta name="author" content="Blake Ostler">
-    <meta property="og:title" content="Directory Page - Diagon Alley Chamber of Commerce">
-    <meta property="og:description" content="Chamber of Commerce business directory page with responsive behavior, a hamburger menu and multiple display capability for the main content that shows the business members of the Chamber and their respective information.">
-    <meta property="og:url" content="https://bostler3.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="Home Page - Diagon Alley Chamber of Commerce">
+    <meta property="og:description" content="Chamber of Commerce home page that shows Chamber events, local weather, and sponsoring members.">
+    <meta property="og:url" content="https://bostler3.github.io/wdd231/chamber">
     <meta property="og:image" content="https://bostler3.github.io/wdd231/chamber/images/facebook-meta-image.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="icon" href="favicon.ico">
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/sponsors.js" defer></script>
     <script src="scripts/date.js" defer></script>
 </head>
 <body>
@@ -34,8 +35,8 @@
                 </div>
                 <div id="sub-nav">
                     <ul class="nav-options">
-                        <li><a href="index.html" id="home-header-nav-link">Home</a></li>
-                        <li><a href="directory.html" class="active" id="directory-header-nav-link">Directory</a></li>
+                        <li><a href="index.html" class="active" id="home-header-nav-link">Home</a></li>
+                        <li><a href="directory.html" id="directory-header-nav-link">Directory</a></li>
                         <li><a href="join.html" id="join-header-nav-link">Join</a></li>
                         <li><a href="discover.html" id="discover-header-nav-link">Discover</a></li>
                     </ul>
@@ -43,21 +44,56 @@
             </div>
         </nav>
         <button id="menu" title="Menu button"></button>
-    </header>
-    <main>
-        <div class="callouts">
-            <div class="callout-data">
-                <div class="callout-data-header">
-                    <h1>Home</h1>
+        <div class="hero-callouts">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/hero-large.webp" media="(min-width: 451px)">
+                    <img src="images/hero-small.webp" alt="Hero image" width="455" height="317">
+                </picture>
+            </div>
+            <div class="callouts-index">
+                <div class="callout-data-index">
+                    <a href="join.html" id="index-button">Join Today!</a>
                 </div>
-                <div class="callout-data-subheader">Check out our members!</div>
             </div>
         </div>
-        <div class="display-options">
-            <button id="grid" title="Grid menu button">Grid</button>
-            <button id="list" title="List menu button">List</button>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div id="sectionsContainer">
+            <section id="section1">
+                <h2>Events</h2>
+                <ul class="event-list">
+                    <li>June 16-18:  Member Conference</li>
+                    <li>July 10:  Networking Lunch</li>
+                    <li>August 25:  Board of Trustees Meeting</li>
+                </ul>
+            </section>
+            <section id="section2">
+                <h2>Current Weather</h2>
+                <div id="current-weather-container">
+                    <div id="current-weather-image-text-column1">
+                        <img id="weather-icon" src="#" alt="" loading="lazy">
+                    </div>
+                    <div id="current-weather-image-text-column2">
+                        <p id="current-temp"></p>
+                        <p id="current-desc"></p>
+                        <p id="high-temp"></p>
+                        <p id="low-temp"></p>
+                        <p id="humidity"></p>
+                        <p id="sunrise"></p>
+                        <p id="sunset"></p>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <h2>Weather Forecast</h2>
+                <p id="forecast-today"></p>
+                <p id="forecast-tomorrow"></p>
+                <p id="forecast-two-days"></p>
+            </section>
         </div>
-        <div class="container">
+        <div class="sponsored-container">
         </div>
     </main>
     <footer>
@@ -65,8 +101,8 @@
             <p id="footer-name">Diagon Alley Chamber of Commerce</p>
             <p class="footer-contact">7 High Street<br>
             London, England HP1 3DA<br>
-            info@dacoc.org<br>
-            +44 020 5555 5555</p>
+            +44 020 5555 5555<br>
+            info@dacoc.org</p>
         </div>
         <hr>
         <div id="footer-social-links-section">

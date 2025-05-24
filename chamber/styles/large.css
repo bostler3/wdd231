@@ -77,7 +77,17 @@
     .callout-data-subheader {
         font-size: 150%;
     }
-    
+
+    .callouts-index {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .callout-data-index {
+        padding-top: 5rem;
+        padding-right: 0;
+    }
+
     .list {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -92,7 +102,23 @@
         margin: 0 1.5rem;
     }
 
-    hr {
+    #sectionsContainer {
+        margin: 0.5rem 2rem;
+        display: grid;
+        grid-template: auto 1fr / 2fr 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    #sectionsContainer section {
+        margin: 0;
+    }
+
+    #section4 {
+        grid-column: 1 / 4;
+    }
+
+    footer hr {
         display: none;
     }
 }
