@@ -89,6 +89,9 @@ function createCards(courses) {
             card.style.background = 'red';
         }
         document.querySelector('.container').appendChild(card);
+        card.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
     });
 }
 
@@ -130,5 +133,24 @@ if (document.querySelector("#wdd")) {
         createCards(wddCourses);
         const result = wddCourses.reduce((accumulator, currentValue) => accumulator + currentValue.credits, 0);
         document.querySelector('#courseTotal').textContent = `The total number of credits for the courses listed below is ${result}.`
+    });
+}
+
+const courseDetails = document.querySelector("#course-details");
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">X</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
     });
 }
