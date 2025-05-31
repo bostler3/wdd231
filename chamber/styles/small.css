@@ -122,7 +122,7 @@ nav {
 }
 
 #menu.open::before {
-    content: "X";
+    content: "❌";
     font-size: 125%;
 }
 
@@ -162,7 +162,7 @@ nav {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     color: var(--gryffindor-text-color);
 }
 
@@ -266,7 +266,8 @@ h1 {
     padding-left: 1rem;
 }
 
-.container {
+.container, .sponsored-container,
+.membership-levels-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 0.5rem;
@@ -277,7 +278,8 @@ h1 {
     padding-bottom: 1rem;
 }
 
-.container section {
+.container section,
+.membership-levels-container section {
     border: 0.5px solid black;
     border-radius: 5px;
     margin: 0.25rem 1rem;
@@ -286,23 +288,29 @@ h1 {
     text-align: center;
 }
 
-section h2 {
+.container h2 {
     font-size: 118%;
+}
+
+/* Got help for animation from Bing search for "css animation of html section element" */
+.membership-levels-container section {
+    border-radius: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container section a, .sponsored-container section a {
     color: var(--ravenclaw-text-color);
-}
-
-.sponsored-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 0.5rem;
-    align-items: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1rem;
 }
 
 .sponsored-container section {
@@ -401,4 +409,222 @@ hr {
     margin: 0.75rem auto;
     border: none;
     border-top: 1px solid var(--main-background-color);
+}
+
+/* Join page */
+.form-header-text, .form {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#form-header-text h2 {
+    padding: 1rem 0 0.5rem 0;
+    font-size: 1.5em;
+}
+
+#membership-levels h2,
+#membership-levels h3 {
+    padding-bottom: 0.5rem;
+}
+
+.form label {
+    display: block;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    max-width: 400px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.label-header {
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.level-radio label {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.radio-label-text {
+    padding-left: 0.5rem;
+}
+
+input[type="radio"] {
+    width: 19px;
+    height: 19px;
+}
+
+.form button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+.membership-levels-button {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+#nonprofit-level-button {
+    background: linear-gradient(45deg, var(--gryffindor-accent-color), var(--gryffindor-text-color));
+    color: black;
+}
+
+#nonprofit-level-button:hover {
+    background: linear-gradient(45deg, var(--gryffindor-text-color), var(--gryffindor-accent-color));
+    transform: scale(1.05);
+}
+
+#bronze-level-button {
+    background: linear-gradient(45deg, var(--ravenclaw-accent-color), var(--ravenclaw-text-color));
+    color: black;
+}
+
+#bronze-level-button:hover {
+    background: linear-gradient(45deg, var(--ravenclaw-text-color), var(--ravenclaw-accent-color));
+    transform: scale(1.05);
+}
+
+#silver-level-button {
+    background: linear-gradient(45deg, var(--hufflepuff-accent-color), var(--hufflepuff-text-color));
+    color: black;
+}
+
+#silver-level-button:hover {
+    background: linear-gradient(45deg, var(--hufflepuff-text-color), var(--hufflepuff-accent-color));
+    transform: scale(1.05);
+}
+
+#gold-level-button {
+    background: linear-gradient(45deg, var(--slytherin-accent-color), var(--slytherin-text-color));
+    color: black;
+}
+
+#gold-level-button:hover {
+    background: linear-gradient(45deg, var(--slytherin-text-color), var(--slytherin-accent-color));
+    transform: scale(1.05);
+}
+
+#nonprofit-section {
+    border: solid 1px var(--gryffindor-text-color);
+}
+
+.nonprofit-level-header {
+    color: var(--gryffindor-text-color);
+    font-size: 1.5em;
+}
+
+#bronze-section {
+    border: solid 1px var(--ravenclaw-text-color);
+}
+
+.bronze-level-header {
+    color: var(--ravenclaw-text-color);
+    font-size: 1.5em;
+}
+
+#silver-section {
+    border: solid 1px black;
+}
+
+.silver-level-header {
+    color: var(--hufflepuff-text-color);
+    font-size: 1.5em;
+}
+
+#gold-section {
+    border: solid 1px var(--slytherin-text-color);
+}
+
+.gold-level-header {
+    color: var(--slytherin-text-color);
+    font-size: 1.5em;
+}
+
+/* Got help for positioning dialog box on screen with a Bing search for "center html dialog element on screen css" */
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+dialog h4 {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.annual-cost {
+    text-align: center;
+    font-weight: bold;
+}
+
+.benefits-list, #results ul {
+    margin-left: 1.25rem;
+}
+
+.benefits-list li, #results li {
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+/* Thank You page */
+#results {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+#results h2 {
+    padding-bottom: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }

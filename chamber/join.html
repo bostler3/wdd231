@@ -1,0 +1,203 @@
+<!-- Do quality checks (HTML, CSS, CSS Overview, Lighthouse), push to GitHub and check audit tool results -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagon Alley Chamber of Commerce - Join</title>
+    <meta name="description" content="Chamber of Commerce new member signup page">
+    <meta name="author" content="Blake Ostler">
+    <meta property="og:title" content="New Member Signup Page - Diagon Alley Chamber of Commerce">
+    <meta property="og:description" content="Chamber of Commerce new member signup page that allows new businesses to learn about the Chamber's different membership levels and a form to apply for membership.">
+    <meta property="og:url" content="https://bostler3.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://bostler3.github.io/wdd231/chamber/images/facebook-meta-image.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navigation">
+                <div class="image-text-container">
+                    <a href="#"><img src="images/logo.webp" alt="Chamber of Commerce icon" width="115" height="115" class="logo-image"></a>
+                    <div class="nav-header-text">
+                        <p id="nav-logo-title">Diagon Alley</p>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </div>
+                <div id="sub-nav">
+                    <ul class="nav-options">
+                        <li><a href="index.html" id="home-header-nav-link">Home</a></li>
+                        <li><a href="directory.html" id="directory-header-nav-link">Directory</a></li>
+                        <li><a href="join.html" class="active" id="join-header-nav-link">Join</a></li>
+                        <li><a href="discover.html" id="discover-header-nav-link">Discover</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <button id="menu" title="Menu button"></button>
+    </header>
+    <main>
+        <div class="callouts">
+            <div class="callout-data">
+                <div class="callout-data-header">
+                    <h1>Join the Chamber!</h1>
+                </div>
+            </div>
+        </div>
+        <div id="join-content-container">
+            <section id="application-form">
+                <div class="form-header-text">
+                    <h2>Membership Application Form</h2>
+                    <p>(* Required field)</p>
+                </div>
+                <form method="get" class="form" action="thankyou.html">
+                    <div class="name-field">
+                        <label>First Name *<input type="text" name="firstName" id="firstName" autocomplete="given-name" title="Please enter your first name" required></label>
+                    </div>
+                    <div class="name-field">
+                        <label>Last Name *<input type="text" name="lastName" id="lastName" autocomplete="family-name" title="Please enter your last name" required></label>
+                    </div>
+                    <div class="title-field">
+                        <label>Title<input type="text" name="title" id="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Enter your title in the organization; must be at least 7 alpha characters (hyphens and spaces okay)"></label>
+                    </div>
+                    <div class="email-field">
+                        <label>E-mail Address *<input type="email" name="email" id="email" autocomplete="email" title="Please enter your e-mail address" placeholder="person@example.com" required></label>
+                    </div>
+                    <div class="phone-field">
+                        <label>Phone Number *<input type="tel" name="phone" id="phone" autocomplete="tel" title="Please enter your phone number" required></label>
+                    </div>
+                    <div class="org-name-field">
+                        <label>Organization Name *<input type="text" name="orgName" id="orgName" autocomplete="organization" title="Please enter your organization's name" required></label>
+                    </div>
+                    <div class="label-header">Which membership level would you like to join? *</div>
+                    <div class="level-radio">
+                        <label id="nonprofit-radio-label"><input type="radio" name="level" id="nonprofit-radio" value="Nonprofit" title="Nonprofit membership level radio button" required><span class="radio-label-text">Nonprofit</span></label>
+                        <label id="bronze-radio-label"><input type="radio" name="level" id="bronze-radio" value="Bronze" title="Bronze membership level radio button"><span class="radio-label-text">Bronze</span></label>
+                        <label id="silver-radio-label"><input type="radio" name="level" id="silver-radio" value="Silver" title="Silver membership level radio button"><span class="radio-label-text">Silver</span></label>
+                        <label id="gold-radio-label"><input type="radio" name="level" id="gold-radio" value="Gold" title="Gold membership level radio button"><span class="radio-label-text">Gold</span></label>
+                    </div>
+                    <div class="org-desc">
+                        <label>Organization Description<textarea name="org-desc" id="org-desc" class="textareaResponse" rows="8" title="Type organization description here..."></textarea></label>
+                    </div>
+                    <div class="timestamp">
+                        <input type="hidden" id="timestamp" name="timestamp" title="Hidden timestamp field">
+                    </div>
+                    <button type="submit">Apply Now</button>
+                </form>
+            </section>
+            <section id="membership-levels">
+                <div class="form-header-text">
+                    <h2>Membership Levels</h2>
+                </div>
+                <div class="membership-levels-container">
+                    <section id="nonprofit-section">
+                        <h3 class="nonprofit-level-header">Nonprofit</h3>
+                        <button class="membership-levels-button open-button-nonprofit" id="nonprofit-level-button">Learn More</button>
+                        <dialog id="modal-nonprofit">
+                            <h3 class="nonprofit-level-header">Nonprofit</h3>
+                            <button class="close-button-nonprofit">❌</button>
+                            <p class="annual-cost">Annual Cost:  $0</p>
+                            <br>
+                            <h4>Benefits</h4>
+                            <ul class="benefits-list">
+                                <li>Monthly Newsletter</li>
+                                <li>Nonprofit-specific consulting from Chamber employees</li>
+                                <li>10% discount off Chamber events</li>
+                                <li>One item of Chamber merchandise per year</li>
+                            </ul>
+                        </dialog>
+                    </section>
+                    <section id="bronze-section">
+                        <h3 class="bronze-level-header">Bronze</h3>
+                        <button class="membership-levels-button open-button-bronze" id="bronze-level-button">Learn More</button>
+                        <dialog id="modal-bronze">
+                            <h3 class="bronze-level-header">Bronze</h3>
+                            <button class="close-button-bronze">❌</button>
+                            <p class="annual-cost">Annual Cost:  $1,000</p>
+                            <br>
+                            <h4>Benefits</h4>
+                            <ul class="benefits-list">
+                                <li>Monthly Newsletter</li>
+                                <li>One on-site training session from Chamber employees per year</li>
+                                <li>10% discount off Chamber events</li>
+                                <li>One item of Chamber merchandise per year</li>
+                            </ul>
+                        </dialog>
+                    </section>
+                    <section id="silver-section">
+                        <h3 class="silver-level-header">Silver</h3>
+                        <button class="membership-levels-button open-button-silver" id="silver-level-button">Learn More</button>
+                        <dialog id="modal-silver">
+                            <h3 class="silver-level-header">Silver</h3>
+                            <button class="close-button-silver">❌</button>
+                            <p class="annual-cost">Annual Cost:  $5,000</p>
+                            <br>
+                            <h4>Benefits</h4>
+                            <ul class="benefits-list">
+                                <li>Monthly Newsletter</li>
+                                <li>Regular advertising on Chamber home page</li>
+                                <li>Two on-site training sessions from Chamber employees per year</li>
+                                <li>18% discount off Chamber events</li>
+                                <li>Two items of Chamber merchandise per year</li>
+                            </ul>
+                        </dialog>
+                    </section>
+                    <section id="gold-section">
+                        <h3 class="gold-level-header">Gold</h3>
+                        <button class="membership-levels-button open-button-gold" id="gold-level-button">Learn More</button>
+                        <dialog id="modal-gold">
+                            <h3 class="gold-level-header">Gold</h3>
+                            <button class="close-button-gold">❌</button>
+                            <p class="annual-cost">Annual Cost:  $10,000</p>
+                            <br>
+                            <h4>Benefits</h4>
+                            <ul class="benefits-list">
+                                <li>Monthly Newsletter</li>
+                                <li>Regular advertising on Chamber home page</li>
+                                <li>Dedicated Chamber employee representative</li>
+                                <li>Two on-site training sessions from Chamber employees per year</li>
+                                <li>25% discount off Chamber events</li>
+                                <li>Offered tickets to Chamber events before anyone else</li>
+                                <li>Three items of Chamber merchandise per year</li>
+                            </ul>
+                        </dialog>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-contact-section">
+            <p id="footer-name">Diagon Alley Chamber of Commerce</p>
+            <p class="footer-contact">7 High Street<br>
+            London, England HP1 3DA<br>
+            +44 020 5555 5555<br>
+            info@dacoc.org</p>
+        </div>
+        <hr>
+        <div id="footer-social-links-section">
+            <ul class="footer-nav-options">
+                <li><a href="https://www.youtube.com" id="youtube-footer-nav-link"><img src="images/social-youtube-icon.svg" alt="YouTube social icon" width="50" height="50"></a></li>
+                <li><a href="https://www.x.com" id="x-footer-nav-link"><img src="images/social-x-icon.svg" alt="X social icon" width="50" height="50" id="x-footer-nav-image"></a></li>
+                <li><a href="https://www.linkedin.com" id="linked-footer-nav-link"><img src="images/social-linkedin-icon.svg" alt="X social icon" width="50" height="50"></a></li>
+            </ul>
+        </div>
+        <hr>
+        <div id="footer-copyright-info-section">
+            <p>WDD231 Class Project<br>
+            Blake Ostler<br>
+            <p id="footercopy">&copy;<span id="currentyear"></span> Diagon Alley Chamber of Commerce<br>
+                Last modification: <span id="currentdatetime"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

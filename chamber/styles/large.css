@@ -50,6 +50,7 @@
         background-color: black;
         text-decoration: underline;
         text-decoration-thickness: 5px;
+        text-underline-offset: 8px;
     }
 
     #sub-nav {
@@ -120,5 +121,31 @@
 
     footer hr {
         display: none;
+    }
+
+    /* Join Page */
+    #join-content-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 1200px;
+    }
+    
+    #application-form {
+        min-width: 450px;
+    }
+
+    .membership-levels-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .membership-levels-container section {
+        width: 100%;
+        max-width: 800px;
     }
 }
