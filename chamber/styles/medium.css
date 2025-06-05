@@ -1,0 +1,10 @@
+@media only screen and (min-width: 38rem) {
+    /* Discover page */
+    .discover-container section {
+        grid-template-areas:
+        "photo" "name"
+        "photo" "desc"
+        "photo" "addr"
+        "learnMoreButton";
+    }
+}

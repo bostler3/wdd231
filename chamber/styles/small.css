@@ -628,3 +628,40 @@ dialog h4 {
     text-decoration: underline;
     text-underline-offset: 8px;
 }
+
+/* Discover page */
+.discover-container section {
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+    "name"
+    "photo"
+    "desc"
+    "addr"
+    "learnMoreButton";
+}
+
+.discover-container section h2 {
+    grid-area: name;
+}
+
+.discover-container section figure {
+    grid-area: photo;
+}
+
+.discover-container section img {
+    width: 100%;
+    height: auto;
+}
+
+.discover-container section p {
+    grid-area: desc;
+}
+
+.discover-container section address {
+    grid-area: addr;
+}
+
+.discover-container section button {
+    grid-area: learnMoreButton;
+}

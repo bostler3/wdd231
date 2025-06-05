@@ -1,4 +1,4 @@
-@media only screen and (min-width: 451px) {
+@media only screen and (min-width: 64rem) {
     .navigation {
         flex-direction: row;
         align-items: center;
@@ -147,5 +147,15 @@
     .membership-levels-container section {
         width: 100%;
         max-width: 800px;
+    }
+
+    /* Discover Page */
+    .discover-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 1200px;
     }
 }

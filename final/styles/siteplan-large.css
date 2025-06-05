@@ -1,0 +1,15 @@
+@media screen and (min-width: 500px) {
+    #wireframes {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 50px;
+    }
+
+    #large-wireframe {
+        grid-column: 1 / 2;
+    }
+
+    #mobile-wireframe {
+        grid-column: 2 / 3;
+    }
+}
