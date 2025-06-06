@@ -2,9 +2,20 @@
     /* Discover page */
     .discover-container section {
         grid-template-areas:
-        "photo" "name"
-        "photo" "desc"
-        "photo" "addr"
-        "learnMoreButton";
+        "name name"
+        "photo desc"
+        "photo addr"
+        "learnMoreButton learnMoreButton";
+        text-align: left;
+        grid-template-columns: 310px auto;
+    }
+
+    .discover-container section img {
+        width: 300px;
+    }
+
+    .discover-container section img:hover {
+        width: 300px;
+        opacity:  0.5;
     }
 }

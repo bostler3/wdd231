@@ -1,4 +1,4 @@
-export const attractions = [
+const attractions = [
     {
         "name": "The Dursley House",
         "address": "Number 4 Privet Drive, Little Whinging, London, England",
@@ -55,3 +55,5 @@ export const attractions = [
         "imageUrl": "images/ministry.webp"
     }
 ]
+
+export default attractions;

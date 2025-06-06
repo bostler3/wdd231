@@ -630,6 +630,13 @@ dialog h4 {
 }
 
 /* Discover page */
+.discover-container {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
 .discover-container section {
     overflow: hidden;
     display: grid;
@@ -639,14 +646,23 @@ dialog h4 {
     "desc"
     "addr"
     "learnMoreButton";
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin: 0.25rem 1rem;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
 }
 
 .discover-container section h2 {
     grid-area: name;
+    padding-bottom: 1rem;
+    text-align: left;
 }
 
 .discover-container section figure {
     grid-area: photo;
+    padding: 0 0 0.25rem 0;
 }
 
 .discover-container section img {
@@ -656,12 +672,36 @@ dialog h4 {
 
 .discover-container section p {
     grid-area: desc;
+    padding-bottom: 1rem;
 }
 
 .discover-container section address {
     grid-area: addr;
+    padding-bottom: 1rem;
 }
 
 .discover-container section button {
     grid-area: learnMoreButton;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    background: linear-gradient(45deg, var(--gryffindor-accent-color), var(--gryffindor-text-color));
+    color: black;
+}
+
+.discover-container section button:hover {
+    background: linear-gradient(45deg, var(--gryffindor-text-color), var(--gryffindor-accent-color));
+    transform: scale(1.02);
+}
+
+#visits {
+    padding-bottom: 1rem;
+    color: black;
 }
