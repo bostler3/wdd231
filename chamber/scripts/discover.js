@@ -1,4 +1,4 @@
-import attractions from '../data/Attractions.mjs';
+import attractions from '../data/attractions.mjs';
 
 const cards = document.querySelector('.discover-container');
 
