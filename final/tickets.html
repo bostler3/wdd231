@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Soccer Fan Zone - Tickets</title>
+    <meta name="description" content="Page that provides an opportunity to (pretend) purchase tickets to an EPL or La Liga match">
+    <meta name="author" content="Blake Ostler">
+    <meta property="og:title" content="Tickets Page - Pro Soccer Fan Zone">
+    <meta property="og:description" content="Site that shows the teams in each league, a page with highlighted players, and a page that allows a user to (pretend) purchase tickets to games.">
+    <meta property="og:url" content="https://bostler3.github.io/wdd231/final/players.html">
+    <meta property="og:image" content="https://bostler3.github.io/wdd231/final/images/logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/tickets.js" type="module"></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navigation">
+                <div class="image-text-container">
+                    <a href="index.html"><img src="images/logo.webp" alt="Pro Soccer Fan Zone icon" width="115" height="115" class="logo-image"></a>
+                    <div class="nav-header-text">
+                        <p id="nav-logo-title">Pro Soccer Fan Zone</p>
+                    </div>
+                </div>
+                <div id="sub-nav">
+                    <ul class="nav-options">
+                        <li><a href="index.html" id="home-header-nav-link">Home</a></li>
+                        <li><a href="players.html" id="players-header-nav-link">Players</a></li>
+                        <li><a href="tickets.html" class="active" id="tickets-header-nav-link">Tickets</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <button id="menu" title="Menu button"></button>
+        <div class="hero-callouts">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/hero-large.jpg" media="(min-width: 480px)">
+                    <img src="images/hero-small.webp" alt="Hero image" width="406" height="416">
+                </picture>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Purchase Tickets! *</h1>
+        <div class="league-container">
+            <img src="images/epl.png" alt="English Premier League logo" width="115" height="115" class="logo-image">
+            <img src="images/la-liga.png" alt="Pro Soccer Fan Zone icon" width="115" height="115" class="logo-image">
+        </div>
+        <div id="joint-content-container">
+            <div>
+                <div id="display-option-buttons">
+                    <button id="grid" class="display-option-button" title="Grid menu button">Grid</button>
+                    <button id="list" class="display-option-button" title="List menu button">List</button>
+                </div>
+                <div class="schedule-container">
+                </div>
+            </div>
+            <span id="target-scroll"></span>
+            <section class="application-form">
+                <div class="form-header-text">
+                    <h2>Ticket Purchase Form **</h2>
+                    <p>(All fields required)</p>
+                </div>
+                <div class="form-container">
+                    <form method="get" class="form" action="confirmation.html">
+                        <fieldset id="ticket-info">
+                            <legend>Ticket Information</legend>
+                            <div class="label-header">Game Information</div>
+                            <textarea rows="2" name="ticket-info-field" id="ticket-info-field" readonly required></textarea>
+                            <div class="num-of-tickets-field">
+                                <label>Number of Tickets<select name="num-of-tickets" id="num-of-tickets"
+                                        title="Please select the number of tickets" required>
+                                    <option label=" " disabled selected></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select></label>
+                            </div>
+                            <div class="label-header">Ticket Delivery Method</div>
+                            <div class="delivery-radio">
+                                <label id="mail-radio-label"><input type="radio" name="delivery" id="mail-radio" value="Mail"
+                                        title="Mail delivery radio button" required><span class="radio-label-text">Mail</span></label>
+                                <label id="email-radio-label"><input type="radio" name="delivery" id="email-radio" value="E-mail"
+                                        title="E-mail delivery radio button"><span class="radio-label-text">E-mail</span></label>
+                                <label id="will-call-radio-label"><input type="radio" name="delivery" id="will-call-radio" value="Will-call"
+                                        title="Will-call delivery radio button"><span class="radio-label-text">Will-Call</span></label>
+                            </div>
+                            <div class="seat-location-field">
+                                <label>Seat Location<select name="seat-location" id="seat-location"
+                                        title="Please select the seat location" required>
+                                        <option label=" " disabled selected></option>
+                                        <option value="Field-level">Field Level</option>
+                                        <option value="Corners">Corners</option>
+                                        <option value="Mezzanine">Mezzanine</option>
+                                        <option value="Upper-level">Upper Level</option>
+                                    </select></label>
+                            </div>
+                        </fieldset>
+                        <fieldset id="contact-info">
+                            <legend>Contact Information</legend>
+                            <div class="name-field">
+                                <label>First Name<input type="text" name="firstName" id="firstName" autocomplete="given-name"
+                                        title="Please enter your first name" required></label>
+                            </div>
+                            <div class="name-field">
+                                <label>Last Name<input type="text" name="lastName" id="lastName" autocomplete="family-name"
+                                        title="Please enter your last name" required></label>
+                            </div>
+                            <div class="street-field">
+                                <label>Street Address<input type="text" name="street" id="street" autocomplete="address-level3"
+                                        title="Please enter your street address" required></label>
+                            </div>
+                            <div class="city-field">
+                                <label>City<input type="text" name="city" id="city" autocomplete="address-level2"
+                                        title="Please enter your city" required></label>
+                            </div>
+                            <div class="state-field">
+                                <label>State<input type="text" name="state" id="state" autocomplete="address-level1" title="Please enter your state"
+                                        required></label>
+                            </div>
+                            <div class="zip-field">
+                                <label>Postal Code<input type="text" maxlength="5" pattern="^\d{5}" name="zip" id="zip" autocomplete="postal-code"
+                                        title="Please enter your postal code; only five digits long" required></label>
+                            </div>
+                            <div class="email-field">
+                                <label>E-mail Address<input type="email" name="email" id="email" autocomplete="email"
+                                        title="Please enter your e-mail address" placeholder="person@soccer.com" required></label>
+                            </div>
+                            <div class="phone-field">
+                                <label>Phone Number<input type="tel" name="phone" id="phone" autocomplete="tel"
+                                        title="Please enter your phone number" required></label>
+                            </div>
+                        </fieldset>
+                        <fieldset id="billing-and-shipping-info">
+                            <legend>Billing Information</legend>
+                            <div class="label-header">Credit Card</div>
+                            <div class="payment-type-radio">
+                                <label id="visa-radio-label"><input type="radio" name="type" id="visa-radio" value="Visa"
+                                        title="Visa payment type radio button" required><span
+                                        class="radio-label-text">Visa</span></label>
+                                <label id="mastercard-radio-label"><input type="radio" name="type" id="mastercard-radio" value="Mastercard"
+                                        title="Mastercard payment type radio button"><span class="radio-label-text">Mastercard</span></label>
+                                <label id="discover-radio-label"><input type="radio" name="type" id="discover-radio" value="Discover"
+                                        title="Discover payment type radio button"><span class="radio-label-text">Discover</span></label>
+                                <label id="amex-radio-label"><input type="radio" name="type" id="amex-radio" value="American Express"
+                                        title="Amex payment type radio button"><span class="radio-label-text">American Express</span></label>
+                            </div>
+                            <div class="number-field">
+                                <label>Card Number<input type="text" maxlength="16" pattern="^\d{16}" name="card-number" id="card-number" autocomplete="cc-number"
+                                        title="Please enter your credit card number" placeholder="5555555555555555" required></label>
+                            </div>
+                                <!-- Do RegEx here -->
+                            <div class="exp-month-field">
+                                <label>Exp. Month<select name="exp-month-field" id="exp-month-field"
+                                        title="Please select the credit card expiration month" autocomplete="cc-exp-month">
+                                        <option label=" " disabled selected></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select></label>
+                            </div>
+                                <div class="exp-year-field">
+                                    <label>Exp. Year<select name="exp-year-field" id="exp-year-field"
+                                            title="Please select the credit card expiration year" autocomplete="cc-exp-year">
+                                        <option label=" " disabled selected></option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2031">2031</option>
+                                        <option value="2032">2032</option>
+                                        <option value="2033">2033</option>
+                                        <option value="2034">2034</option>
+                                        <option value="2035">2035</option>
+                                        <option value="2036">2036</option>
+                                    </select></label>
+                            </div>
+                        </fieldset>
+                        <div class="timestamp">
+                            <input type="hidden" id="timestamp" name="timestamp" title="Hidden timestamp field">
+                        </div>
+                        <button type="submit">Buy Now</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <p class="disclaimer-text">* This is a website built as an educational assignment. Tickets are not actually for sale.<br>
+        ** This is a website built as an educational assignment.  Please do not enter any real information.</p>
+    </main>
+    <footer>
+        <ul class="footer-nav-options">
+            <li><a href="index.html" id="leagues-footer-nav-link">Leagues</a></li>
+            <li><a href="players.html" id="players-footer-nav-link">Players</a></li>
+            <li><a href="tickets.html" class="active" id="tickets-footer-nav-link">Tickets</a></li>
+            <li><a href="references.html" id="references-footer-nav-link">References</a></li>
+        </ul>
+        <hr>
+        <p id="footercopy">&copy;<span id="currentyear"></span> | Blake Ostler (U.S.A.) and listed references<br>
+            Last modification: <span id="currentdatetime"></span></p>
+    </footer>
+</body>
+</html>

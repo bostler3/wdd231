@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Soccer Fan Zone - Home</title>
-    <meta name="description" content="Site that provides information for pro soccer fans, focusing on a few popular leagues">
+    <title>Pro Soccer Fan Zone - Players</title>
+    <meta name="description" content="Page that provides information for pro soccer fans on top players in the English Premier League and La Liga">
     <meta name="author" content="Blake Ostler">
-    <meta property="og:title" content="Home Page - Pro Soccer Fan Zone">
+    <meta property="og:title" content="Players Page - Pro Soccer Fan Zone">
     <meta property="og:description" content="Site that shows the teams in each league, a page with highlighted players, and a page that allows a user to (pretend) purchase tickets to games.">
-    <meta property="og:url" content="https://bostler3.github.io/wdd231/final/index.html">
+    <meta property="og:url" content="https://bostler3.github.io/wdd231/final/players.html">
     <meta property="og:image" content="https://bostler3.github.io/wdd231/final/images/logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,8 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="icon" href="favicon.ico">
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/players.js" type="module"></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/visits.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,8 +33,8 @@
                 </div>
                 <div id="sub-nav">
                     <ul class="nav-options">
-                        <li><a href="index.html" class="active" id="home-header-nav-link">Home</a></li>
-                        <li><a href="players.html" id="players-header-nav-link">Players</a></li>
+                        <li><a href="index.html" id="home-header-nav-link">Home</a></li>
+                        <li><a href="players.html" class="active" id="players-header-nav-link">Players</a></li>
                         <li><a href="tickets.html" id="tickets-header-nav-link">Tickets</a></li>
                     </ul>
                 </div>
@@ -52,25 +51,25 @@
         </div>
     </header>
     <main>
-        <h1>Leagues and Teams</h1>
+        <h1>Top Offensive Players</h1>
+        <p id="player-tip-text">Click the card to turn it over to see player stats!</p>
         <div class="league-container">
-            <img src="images/epl.webp" alt="English Premier League logo" width="100" height="100" class="league-image">
-            <img src="images/la-liga.webp" alt="Pro Soccer Fan Zone icon" width="100" height="100" class="league-image">
+            <img src="images/epl.png" alt="English Premier League logo" width="115" height="115" class="logo-image">
+            <img src="images/la-liga.png" alt="Pro Soccer Fan Zone icon" width="115" height="115" class="logo-image">
         </div>
-        <div class="container">
+        <div class="card-container">
         </div>
     </main>
     <footer>
         <ul class="footer-nav-options">
-            <li><a href="index.html" class="active" id="leagues-footer-nav-link">Home</a></li>
-            <li><a href="players.html" id="players-footer-nav-link">Players</a></li>
+            <li><a href="index.html" id="leagues-footer-nav-link">Leagues</a></li>
+            <li><a href="players.html" class="active" id="players-footer-nav-link">Players</a></li>
             <li><a href="tickets.html" id="tickets-footer-nav-link">Tickets</a></li>
             <li><a href="references.html" id="references-footer-nav-link">References</a></li>
         </ul>
         <hr>
         <p id="footercopy">&copy;<span id="currentyear"></span> | Blake Ostler (U.S.A.) and listed references<br>
-            Last modification: <span id="currentdatetime"></span><br>
-            Site Visit Count by User: <span id="visits"></span></p>
+            Last modification: <span id="currentdatetime"></span></p>
     </footer>
 </body>
 </html>

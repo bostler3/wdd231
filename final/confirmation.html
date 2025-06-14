@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Soccer Fan Zone - Home</title>
-    <meta name="description" content="Site that provides information for pro soccer fans, focusing on a few popular leagues">
+    <title>Pro Soccer Fan Zone - Tickets</title>
+    <meta name="description"
+        content="Page that provides an opportunity to (pretend) purchase tickets to an EPL or La Liga match">
     <meta name="author" content="Blake Ostler">
-    <meta property="og:title" content="Home Page - Pro Soccer Fan Zone">
-    <meta property="og:description" content="Site that shows the teams in each league, a page with highlighted players, and a page that allows a user to (pretend) purchase tickets to games.">
-    <meta property="og:url" content="https://bostler3.github.io/wdd231/final/index.html">
+    <meta property="og:title" content="Tickets Page - Pro Soccer Fan Zone">
+    <meta property="og:description"
+        content="Site that shows the teams in each league, a page with highlighted players, and a page that allows a user to (pretend) purchase tickets to games.">
+    <meta property="og:url" content="https://bostler3.github.io/wdd231/final/players.html">
     <meta property="og:image" content="https://bostler3.github.io/wdd231/final/images/logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,23 +21,24 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="icon" href="favicon.ico">
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/confirmation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/visits.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="navigation">
                 <div class="image-text-container">
-                    <a href="index.html"><img src="images/logo.webp" alt="Pro Soccer Fan Zone icon" width="115" height="115" class="logo-image"></a>
+                    <a href="index.html"><img src="images/logo.webp" alt="Pro Soccer Fan Zone icon" width="115" height="115"
+                            class="logo-image"></a>
                     <div class="nav-header-text">
                         <p id="nav-logo-title">Pro Soccer Fan Zone</p>
                     </div>
                 </div>
                 <div id="sub-nav">
                     <ul class="nav-options">
-                        <li><a href="index.html" class="active" id="home-header-nav-link">Home</a></li>
+                        <li><a href="index.html" id="home-header-nav-link">Home</a></li>
                         <li><a href="players.html" id="players-header-nav-link">Players</a></li>
                         <li><a href="tickets.html" id="tickets-header-nav-link">Tickets</a></li>
                     </ul>
@@ -52,25 +56,22 @@
         </div>
     </header>
     <main>
-        <h1>Leagues and Teams</h1>
-        <div class="league-container">
-            <img src="images/epl.webp" alt="English Premier League logo" width="100" height="100" class="league-image">
-            <img src="images/la-liga.webp" alt="Pro Soccer Fan Zone icon" width="100" height="100" class="league-image">
+        <h1>Ticket Purchase Confirmation *</h1>
+        <div id="results">
         </div>
-        <div class="container">
-        </div>
+        <p class="disclaimer-text">* This is a website built as an educational assignment. Tickets are not actually for
+            sale and no transcation has actually been made.</p>
     </main>
     <footer>
         <ul class="footer-nav-options">
-            <li><a href="index.html" class="active" id="leagues-footer-nav-link">Home</a></li>
+            <li><a href="index.html" id="leagues-footer-nav-link">Leagues</a></li>
             <li><a href="players.html" id="players-footer-nav-link">Players</a></li>
             <li><a href="tickets.html" id="tickets-footer-nav-link">Tickets</a></li>
             <li><a href="references.html" id="references-footer-nav-link">References</a></li>
         </ul>
         <hr>
         <p id="footercopy">&copy;<span id="currentyear"></span> | Blake Ostler (U.S.A.) and listed references<br>
-            Last modification: <span id="currentdatetime"></span><br>
-            Site Visit Count by User: <span id="visits"></span></p>
+            Last modification: <span id="currentdatetime"></span></p>
     </footer>
 </body>
 </html>
